@@ -1,5 +1,5 @@
 @font-face {
-    font-family:'Angkor' , sans-serif;
+    font-family:'Angkor', sans-serif;
     src: url(<link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Angkor&display=swap" rel="stylesheet">);
@@ -35,4 +35,8 @@ nav li {
 footer {
     color: white;
     background-color: #053541;
+}
+
+.front_image {
+    max-width: 900px;
 }
