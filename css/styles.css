@@ -26,23 +26,70 @@ h2 {
     color: #053541;
 }
 
-header {
-
-}
-
 .logo {
     float: left;
     width: 100px;
 }
 
-nav  {
+nav,
+#menu-checkbox {
     display: none;
 }
 
-#menu-checkbox :checked ~ nav {
+#menu-checkbox:checked ~ nav {
     display: block;
 }
 
+/* Links */
+a {
+    text-decoration: none;
+}
+header a {
+    color: white;
+    padding 10 px;
+}
+
+header {
+    position: relative;
+    background: white;
+    color: #053541;
+    padding: 10px;
+    font-size: 1,5rem;
+}
+
+
+nav  {
+    position: absolute;
+    background: white;
+    color: black;
+    left: 0px;
+}
+
+
+nav a {
+    display: block;
+    color: black;
+    padding: 10px 30px;
+    font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+    nav {
+        display: inline;
+        position: static;
+        background-color: #053541;
+        text-decoration-line: none;
+        color: white;
+    }
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+nav a {
+    display: inline-block;
+}
 
 main {
     background-image: url("../images/front_page_image.jpg");
@@ -66,10 +113,27 @@ main {
     background-color: #053541;
 }
 
-.cta {
-  background-color: #053541;
-  color: white;  
+.cta-white {
+  background-color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration-line: none;
+  color: #053541; 
+  text-transform: uppercase; 
+  padding: 10px 25px;
+  border-radius: 3px;
 }
+
+.cta-blue {
+    background-color: #053541;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration-line: none;
+    color: white; 
+    text-transform: uppercase; 
+    padding: 10px 25px;
+    border-radius: 3px;
+  }
 
 /* Contact page */
 .form-input {
