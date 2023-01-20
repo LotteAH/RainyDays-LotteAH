@@ -25,18 +25,53 @@ h2 {
     font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
     color: #053541;
 }
-nav li {
-    display: inline-block;
-    font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
+
+header {
+
+}
+
+.logo {
+    float: left;
+    width: 100px;
+}
+
+nav  {
+    display: none;
+}
+
+#menu-checkbox :checked ~ nav {
+    display: block;
+}
+
+
+main {
+    background-image: url("../images/front_page_image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    min-height: 400px;
+    width: 70%;
+
+    border-image: url(../images/womens_coats.jpg)
+  
+  }
+
+  .coats {
+    float: right;
+    width: 30%;
+  }
+
+  footer {
     color: white;
     background-color: #053541;
 }
 
-footer {
-    color: white;
-    background-color: #053541;
+.cta {
+  background-color: #053541;
+  color: white;  
 }
 
-.front_image {
-    max-width: 900px;
+/* Contact page */
+.form-input {
+    border: 1 px solid #D2CDCA
 }
