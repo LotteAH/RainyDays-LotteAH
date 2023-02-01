@@ -8,20 +8,9 @@
 }
 
 html, body {
+    font-family: 'Source Sans', Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
 }
-
-img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-}
-
-.logo {
-    width: 67.08px;
-    height: 36px;
-}
-
 
 h1 {
     font-family: 'Angkor', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -30,9 +19,51 @@ h1 {
 
 h2 {
     font-family: 'Angkor', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #053541;
+    color: #FFFFFF;  
 }
 
+h3 {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 107.69%; 
+    color: #000000; 
+}
+
+h4 {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 107.69%;
+    color: #053541;   
+}
+
+h5 {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 107.69%;
+    color: #000000;
+}
+
+.price {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 107.69%;
+    text-align: right; 
+}
+
+    
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
 
 .logo {
     width: 67.08px;
@@ -55,10 +86,39 @@ header {
     border: 2px solid #053541;
     border-radius: 5px;
 }
+nav {
+    display: flex;
+    margin-left: 25px;
+  }
+  
+  nav ul {
+    display: flex;
+    padding: 0px 30px;
+  }
+
+  nav li {
+    display: inline-block;
+  }
 
 .main-nav {
     display: none
 }
+
+nav  {
+    position: absolute;
+    background: white;
+    color: black;
+    left: 0px;
+}
+
+
+nav a {
+    display: block;
+    color: black;
+    padding: 10px 30px;
+    font-size: 1rem;
+}
+
 
 .cart-icon, .hamburger-icon {
     width: 26px;
@@ -93,7 +153,6 @@ header {
     display: none;
 }
 
-/* Links */
 a {
     text-decoration: none;
 }
@@ -110,26 +169,10 @@ header {
     font-size: 1,5rem;
 }
 
-
-nav  {
-    position: absolute;
-    background: white;
-    color: black;
-    left: 0px;
-}
-
-
-nav a {
-    display: block;
-    color: black;
-    padding: 10px 30px;
-    font-size: 1rem;
-}
-
-
-  footer {
+footer {
     color: white;
     background-color: #053541;
+    display: grid;
 }
 
 .cta-white {
@@ -139,8 +182,8 @@ nav a {
   text-decoration-line: none;
   color: #053541; 
   text-transform: uppercase; 
-  padding: 10px 25px;
-  border-radius: 3px;
+  padding: 15px 30px;
+  border-radius: 5px;
 }
 
 .cta-blue {
@@ -153,6 +196,69 @@ nav a {
     padding: 10px 25px;
     border-radius: 3px;
   }
+.cta-green {
+    background-color: #0F8E2B;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration-line: none;
+    color: white; 
+    text-transform: uppercase; 
+    padding: 10px 100px;
+    border-radius: 5px;  
+}
+
+
+/* Home page */
+
+.welcome {
+    background-image: url("../images/front_page_image_large.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    min-height: 50vh;
+    position: relative;
+}
+
+.welcome__content {
+    color: #fff;
+    position: absolute;
+    text-align: end;
+    top: 100px;
+    left: 100px;
+      }
+.white-text {
+    color: #fff;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.white_text-small{
+    color: #fff;
+    font-size: 2rem;   
+}
+
+.categories_womens {
+    background-image: url("../images/womens_coats_small.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    min-height: 50vh;
+    position: relative;
+}
+
+.categories_mens {
+    background-image: url("../images/mens_coats-small.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    min-height: 50vh;
+    position: relative; 
+}
+
+
+/* About page */
 
 /* Contact page */
 .form-input {
@@ -160,7 +266,7 @@ nav a {
 }
 
 .contact_info {
-    font-family: 'Sourcece Sans';
+    font-family: 'Source Sans'Verdana, Geneva, Tahoma, sans-serif;
     display: block;
 }
 
@@ -218,6 +324,15 @@ Media queries
         background-color: #053541;
     }
 
+    .welcome {
+        background-image: url("../images/front_page_image_small.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        min-height: 70vh;
+        position: relative;
+    }
 footer {
     display: grid;
     grid-template-areas:
