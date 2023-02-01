@@ -162,12 +162,18 @@ nav a {
 .contact_info {
     font-family: 'Sourcece Sans';
     display: block;
-
 }
-.form-wraapper {
+
+.form-wrapper {
+    display: flex;
+}
+
+.form-wrapper > * {
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
+
 
 /**
 Media queries 
@@ -217,4 +223,19 @@ footer {
     display: grid;
     grid-template-areas:
         "contact  numbers follow";
+}
+
+/* Contact page */
+.form-input {
+    border: 1 px solid #D2CDCA
+}
+
+.contact_info {
+    font-family: 'Sourcece Sans';
+    display: block;
+
+}
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
 }
