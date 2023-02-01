@@ -97,7 +97,11 @@ nav {
   }
 
   nav li {
+    font-family: 'Source Sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
     display: inline-block;
+    text-transform: capitalize;
+    
   }
 
 .main-nav {
@@ -207,6 +211,9 @@ footer {
     border-radius: 5px;  
 }
 
+.current-page {
+    color: #888181;
+}
 
 /* Home page */
 
@@ -257,7 +264,15 @@ footer {
     position: relative; 
 }
 
+/* Categories page */
+/* Womens products page */
+/* Oslo Urban Page */
 
+.selcted_image {
+    box-sizing: border-box;
+    border: 7px solid #D2CDCA;
+    padding: 60px 0px;
+}
 /* About page */
 
 /* Contact page */
