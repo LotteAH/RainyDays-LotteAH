@@ -217,7 +217,6 @@ Media queries
         color: #fff;
         background-color: #053541;
     }
-}
 
 footer {
     display: grid;
@@ -238,4 +237,5 @@ footer {
 .form-wrapper {
     display: flex;
     flex-direction: column;
+}
 }
