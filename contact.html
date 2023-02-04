@@ -8,11 +8,12 @@
     <title>Rainy Days | Contact</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Angkor&display=swap">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/b657cbf012.css" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <img src="images/RainyDays-Logo.png" alt="RainyDays logo" class="logo" />
+        <a href="index.html"><img src="images/RainyDays-Logo.png" href="index.html" alt="RainyDays logo" class="logo"/></a>  
             <input type="search" class="search-box" name="search" id="serach" aria-label="The search box">
             <svg class="cart-icon" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -36,15 +37,14 @@
     </header>
         <section>
             <h1>Contact us:</h1>
-            <p class= "contact_info"> 
-                Rainydays 
-                Hagaløkkveien 13
-                N-1383 Asker
-                Org.nr. 916 293 623
-                Tlf: +47 32 25 25 00
-            </p>
+            <div class="contact_info"> 
+                Rainydays <br> 
+                Hagaløkkveien 13 <br>
+                N-1383 Asker <br>
+                Org.nr. 916 293 623 <br>
+                Tlf: +47 32 25 25 00 <br>
+            </div>
             <a href="index.html" class="cta-blue">EMAIL US</a>
-           
         </section>
         <section>
             <div class="form-wrapper">
@@ -54,12 +54,11 @@
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" class="form__input">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" class="form__input">
+                    <input type="text" name="email" id="email" class="form__input">
                     <label for="phone">Phone</label>
-                    <input type="tel" name="phone" id="phone" class="form__input">
-                </fieldset>
-                <fieldset>
-                    <legend>Message</legend>
+                    <input type="text" name="phone" id="phone" class="form__input">
+                    <label for="messagee">Message</label>
+                    <input type="text" name="message" id="message" class="form__input">
                 </fieldset>
             <input type="submit" value="SUBMIT" class="cta-blue">
         </form>

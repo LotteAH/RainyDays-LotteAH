@@ -8,56 +8,61 @@
 }
 
 html, body {
-    font-family: 'Source Sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Source Sans Pro", Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
 }
 
 h1 {
-    font-family: 'Angkor', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Angkor", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #053541;
+
 }
 
 h2 {
-    font-family: 'Angkor', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #FFFFFF;  
+    font-family: "Angkor", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #FFFFFF; 
+
 }
 
 h3 {
-    font-family: 'Source Sans Pro';
+    font-family: "Source Sans Pro";
     font-style: normal;
     font-weight: 600;
-    font-size: 32px;
-    line-height: 107.69%; 
+    font-size: 2rem;
+    line-height: 100%;
     color: #000000; 
 }
 
 h4 {
-    font-family: 'Source Sans Pro';
+    font-family: "Source Sans Pro";
     font-style: normal;
     font-weight: 600;
-    font-size: 22px;
-    line-height: 107.69%;
+    font-size: 1.5em;
+    line-height: 150%;
     color: #053541;   
 }
 
 h5 {
-    font-family: 'Source Sans Pro';
+    font-family: "Source Sans Pro";
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1.5em;
     line-height: 107.69%;
     color: #000000;
 }
 
 .price {
-    font-family: 'Roboto';
+    font-family: "Source Sans Pro", Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 32px;
     line-height: 107.69%;
     text-align: right; 
+    color: #053541;
 }
-
+ .text_margin {
+    margin-left: 20px;
+}
     
 img {
     max-width: 100%;
@@ -68,6 +73,14 @@ img {
 .logo {
     width: 67.08px;
     height: 36px;
+    margin-bottom: 20px;
+}
+
+.icons_container {
+    display: inline-flex;
+    align-content: center;
+    padding: 10px;
+    size: 2em;
 }
 
 header {
@@ -79,28 +92,40 @@ header {
     gap: 10px;
 }
 
+.header_container {
+    display: grid;
+    width: 100%;
+    padding-left: 40px;
+    grid-template-rows: 2fr 6fr 1fr;
+
+}
+
 .search-box {
     width: 200px;
     height: 35px;
     background: #FFFFFF;
+    background-repeat: no-repeat;
     border: 2px solid #053541;
     border-radius: 5px;
-}
-nav {
-    display: flex;
-    margin-left: 25px;
-  }
+    background-image: url(../images/search.png)
+    }
+
+    nav {
+        display: flex;
+        width: 100px;
+      } 
   
   nav ul {
     display: flex;
-    padding: 0px 30px;
   }
 
   nav li {
+    width: 100%;
     font-family: 'Source Sans', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     display: inline-block;
     text-transform: capitalize;
+    
     
   }
 
@@ -141,8 +166,8 @@ nav a {
     background: #FFFFFF;
     background: #fff;
     box-shadow: 1px 1px 1px 1px #ccc;
-    font-family: 'Source sans';
-    font-weight: 300;
+    font-family: "Source Sans Pro", Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
     color: black;
 
 }
@@ -167,6 +192,7 @@ header a {
 
 header {
     position: relative;
+    width: 100%;
     background: white;
     color: #053541;
     padding: 10px;
@@ -177,6 +203,12 @@ footer {
     color: white;
     background-color: #053541;
     display: grid;
+    width: 100%;
+    padding: 20px 10px 50px 10px;
+}
+
+.line_footer {
+    margin: 10px;
 }
 
 .cta-white {
@@ -188,6 +220,7 @@ footer {
   text-transform: uppercase; 
   padding: 15px 30px;
   border-radius: 5px;
+  margin: 20px;
 }
 
 .cta-blue {
@@ -215,6 +248,57 @@ footer {
     color: #888181;
 }
 
+.product_images {
+    border: 2px solid #D2CDCA;
+}
+
+.product_img_men {
+    padding-bottom: 30px;
+}
+
+
+.selcted_image {
+    box-sizing: border-box;
+    border: 7px solid #D2CDCA;
+    padding: 60px 0px;
+}
+
+.container {
+    width:100%;
+    padding: 30px 15px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #D2CDCA;
+  }
+
+.container_shop {
+   display: grid;
+   margin-right: 40px;
+   column-gap: 1em; 
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  }
+.white_line {
+    position: absolute;
+    width: 125px;
+    height: 0px;
+    left: 76px;
+    top: 965px;
+    border: 3px solid #FFFFFF;
+    transform: rotate(90deg);   
+}
+
+.container_footer {
+   display: grid;
+   margin-right: 40px;
+   column-gap: 1em; 
+   grid-template-columns: auto 1fr auto 1fr auto 1fr;
+   align-content: flex-start;
+  }
+
 /* Home page */
 
 .welcome {
@@ -235,13 +319,20 @@ footer {
     left: 100px;
       }
 .white-text {
+    display: flex;
     color: #fff;
     font-size: 4rem;
     text-transform: uppercase;
+    padding-top: 25%;
+    margin-left: 40px;
+    line-height: 4rem;
 }
 .white_text-small{
     color: #fff;
-    font-size: 2rem;   
+    font-size: 2rem; 
+    line-height: 2rem;
+    margin-left: 40px; 
+    margin-bottom: 40px; 
 }
 
 .categories_womens {
@@ -252,6 +343,12 @@ footer {
     background-position-y: top;
     min-height: 50vh;
     position: relative;
+}
+
+.white_logo {
+    float:right;
+    padding: 60px;
+    margin-right: 20px;
 }
 
 .categories_mens {
@@ -268,21 +365,32 @@ footer {
 /* Womens products page */
 /* Oslo Urban Page */
 
-.selcted_image {
-    box-sizing: border-box;
-    border: 7px solid #D2CDCA;
-    padding: 60px 0px;
-}
+
 /* About page */
+
+/* Check Out page */
+
+
 
 /* Contact page */
 .form-input {
-    border: 1 px solid #D2CDCA
+    background: #FFFFFF;
+    border: 3px solid #D2CDCA;
+    
+}
+
+input[type="text"] {
+    background: #FFFFFF;
+    border: 3px solid #D2CDCA;
+    padding: 10px;
+    width: 100%;
 }
 
 .contact_info {
-    font-family: 'Source Sans'Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Source Sans Pro";
+    font-weight: 400;
     display: block;
+    padding-left: 40px;
 }
 
 .form-wrapper {
@@ -348,15 +456,44 @@ Media queries
         min-height: 70vh;
         position: relative;
     }
+}
+    @media (max-width: 755px) {
+        
+.white_logo {
+        size: 30%;
+        float:left;
+        padding: 60px;
+    }
+
+.white-text {
+        display: flex;
+        float: right;
+        color: #fff;
+        font-size: 4rem;
+        text-transform: uppercase;
+        text-align: right;
+        padding-top: 25%;
+        margin-right: 40px;
+        line-height: 4rem;
+    }
+.white_text-small{
+        color: #fff;
+        float: right;
+        font-size: 2rem; 
+        text-align: right;
+        line-height: 2rem;
+        margin-right: 40px; 
+        margin-bottom: 40px; 
+    }
 footer {
-    display: grid;
+    display: grid
     grid-template-areas:
         "contact  numbers follow";
 }
 
 /* Contact page */
 .form-input {
-    border: 1 px solid #D2CDCA
+    border: 1px solid #D2CDCA
 }
 
 .contact_info {
