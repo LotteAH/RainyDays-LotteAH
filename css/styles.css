@@ -13,14 +13,14 @@ html, body {
 }
 
 .header_top {
-display: grid;
-width: 100%;
-grid-row: auto 1fr auto;
-}
-
-.header_bottom {
-    display: flex;
-}
+    display: grid;
+    width: 100%;
+    grid-row: auto 1fr auto;
+    }
+    
+    .header_bottom {
+        display: flex;
+    }
 
 footer {
     margin: auto;
@@ -190,14 +190,13 @@ nav li {
 
 nav  {
     background: white;
-    color: black;
-    left: 0px;
 }
 
 
 nav a {
     display: block;
-    color: black;
+    background-color: #053541;
+    color: #FFFFFF;
     padding: 10px 30px;
     font-size: 1rem;
 }
@@ -206,25 +205,22 @@ nav a {
 a {
     text-decoration: none;
 }
-header a {
+/* header a {
     color: white;
-    padding: 10px;
-}
+}/* 
 
-header {
-    position: relative;
+/* header {
     width: 100%;
     background: white;
     color: #053541;
-    padding: 10px;
     font-size: 1,5rem;
-}
+}/* 
 
 
 
-.line_footer {
+/* .line_footer {
     margin: 10px;
-}
+}*/
 
 .cta-white {
   background-color: white;
@@ -354,6 +350,11 @@ header {
     min-height: 50vh;
     position: relative;
 }
+.x-container {
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 40px;
+  }
 
 .welcome__content {
     color: #fff;
