@@ -98,7 +98,11 @@ img {
 }
 
 header {
-    display: flex;
+    display: grid;
+    grid-template-areas:
+            "logo box cart burger";
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-rows: auto;
     width: 100%;
     padding-left: 27px;
     padding-top: 44px;
@@ -129,22 +133,34 @@ header {
 .cart-icon, .hamburger-icon {
     width: 26px;
     height: 26px;
-    
+    cursor: pointer;
+    background-color: pink;
+    /* This is just until you fix the icon */
 }
 
-#menu-checkbox:checked ~.main-nav {
-    display: flex;
-    flex-direction: column;
-    right: 10px;
-    width: 310px;
-    top: 70px;
-    height: 351px;
-    background: #FFFFFF;
-    background: #fff;
-    box-shadow: 1px 1px 1px 1px #ccc;
-    font-family: "Source Sans Pro", Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 700;
-    color: black;
+@media (max-width: 756px) {
+    #menu-checkbox:checked ~.main-nav {
+        position: absolute;
+        display: flex;
+        right: 10px;
+        width: 310px;
+        top: 70px;
+        background: #FFFFFF;
+        background: #fff;
+        box-shadow: 1px 1px 1px 1px #ccc;
+        font-family: "Source Sans Pro", Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+        color: black;
+        z-index: 1000;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    header a {
+        color: black;
+    }
 }
 
 .close-btn-wrapper {
@@ -436,6 +452,8 @@ Media queries
         grid-template-areas:
             "logo box cart"
             "nav nav nav";
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto;
     }
 
     .hamburger-icon {
