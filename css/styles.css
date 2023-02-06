@@ -12,6 +12,10 @@ html, body {
     width: 100%;
 }
 
+.desktop-container {
+    margin: 0 auto;
+    padding: 40px;
+  }
 .x-container {
     max-width: 80ch;
     margin: 0 auto;
@@ -44,7 +48,6 @@ header {
 .header_container {
         display: grid;
         width: 100%;
-        padding-left: 40px;
         grid-template-rows: 2fr 6fr 1fr;
     
     }
@@ -141,6 +144,7 @@ header a {
     } 
     
 header {
+        margin: auto;
         width: 100%;
         background: white;
         color: #053541;
@@ -238,7 +242,6 @@ img {
   text-transform: uppercase; 
   padding: 15px 30px;
   border-radius: 5px;
-  margin: 20px;
 }
 
 .cta-blue {
@@ -398,6 +401,7 @@ img {
     position: relative;
 }
 
+
 .white_logo {
     float:right;
     padding: 60px;
@@ -512,6 +516,9 @@ Media queries
         position: relative;
     }
 }
+
+/* Mobile view */
+
     @media (max-width: 755px) {
         
 .white_logo {
@@ -540,7 +547,13 @@ Media queries
         margin-right: 40px; 
         margin-bottom: 40px; 
     }
-footer {
+
+.cta-white {
+    display: felx;
+    float: right;
+      }
+
+      footer {
     display: grid
     grid-template-areas;
         "contact  numbers follow";
