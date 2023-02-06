@@ -174,7 +174,7 @@ nav li {
 }
 
 nav  {
-    position: absolute;
+    /* position: absolute; */
     background: white;
     color: black;
     left: 0px;
