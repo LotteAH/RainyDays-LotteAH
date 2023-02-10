@@ -34,18 +34,27 @@
         </ul>
     </nav>
 </header>  
-<main>
+<main class="x-container">
   <h1>Check out</h1>
-  <div class="products">
-    <img src="images/womens_1.jpg" alt="Oslo Urban Anorak" />
-    <h5>Oslo Urban Anorak 300$</h5>
-    <h5>Shipping 7$</h5>
-    <h5>Total 307$</h5>
-    <a href="oslo_urban.html"> </a>
-  </div>
-  <form method="POST">
+  <section class="check-out_container">
+    <div>
+      <img src="images/womens_1.jpg" class="check-out_images" alt="Oslo Urban Anorak" />
+    </div>
+    <div>
+      <h3>Oslo Urban Anorak</h3> 
+      <h4 class="clear">Shipping</h4>
+      <h4 class="clear">Total</h4> 
+    </div>
+    <div>
+      <h4 class="cart_numbers">300$</h4>
+      <h4 class="cart_numbers">7$</h4>
+      <p class="price">Total 307$</p>
+    </div class="clearfix">
+
+  <section class="x.container">
+    <form method="POST">
     <div class="form-wrapper">
-      <section>
+      <section class="x-container">
         <label for="Email">Email</label>
         <input type="text" id="Email" name="Email" />
         <label for="card_information">Card information</label>
@@ -56,10 +65,9 @@
         <input type="text" id="CVC" name="CVC" />
       <div>
         <h3>SUBTOTAL.......................$307</h3>
-        <a href="sucess.html" class="cta-green">PURCHASE</a>
-
-
-      </section>
+        <a href="sucess.html" class="cta-green cta-centered">PURCHASE</a>
+  </section>
+</section>
         
 </main>
 <footer class="container_footer">
