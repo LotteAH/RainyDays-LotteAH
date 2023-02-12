@@ -201,7 +201,13 @@ h5 {
 }
 
 .cart-numbers {
-    float: right;
+    text-align: right;
+}
+
+.sub-total {
+    margin-top: 20px;
+    text-align: center;
+
 }
 
 img {
@@ -254,11 +260,6 @@ fieldset {
     transform: rotate(-45deg);
     margin: 0;
   }
-
-
-/* .line_footer {
-    margin: 10px;
-}*/
 
 .cta-white {
     background-color: white;
@@ -332,7 +333,7 @@ input {
 }
 .check-out_images {
     display: flex; 
-    max-width: 200px;
+    max-width: 150px;
     padding: 20px;
     box-sizing: border-box;
     border: 2px solid #D2CDCA;
@@ -390,8 +391,10 @@ input {
 .check-out_container {
     display: grid;
     column-gap: 1em;
-    row-gap: 1em;
-    grid-template-columns: 1fr 1fr 1fr;  
+    row-gap: 2em;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: 1fr; 
+    padding-bottom: 20px; 
 }
 
 .sucess-wrapper {
@@ -535,6 +538,7 @@ input[type="text"] {
 
 .form-wrapper {
     display: flex;
+    justify-content: space-between 20px;
     flex-direction: column;
 }
 
@@ -542,6 +546,7 @@ input[type="text"] {
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between 20px;
 }
 
 .message-box {
@@ -613,6 +618,11 @@ header a {
         float: center;
         padding: 60px;
     }
+    .container_footer {
+        display: grid;
+        column-gap: 1em; 
+        grid-template-columns: 1fr;
+     }
 
 }
 
