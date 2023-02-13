@@ -274,7 +274,6 @@ fieldset {
     text-transform: uppercase;
     padding: 10px 40px;
     border-radius: 5px;
-    margin: 20px auto;
     grid-area: cta;
     max-width: max-content;
 }
