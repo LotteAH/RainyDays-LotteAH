@@ -12,6 +12,12 @@ html, body {
     width: 100%;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .desktop-container {
     margin: 0 auto;
     padding: 40px;
@@ -21,6 +27,7 @@ html, body {
     max-width: 80ch;
     margin: 0 auto;
     padding: 40px;
+    flex: 1;
   }
   
 header {
