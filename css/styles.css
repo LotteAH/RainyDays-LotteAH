@@ -61,6 +61,7 @@ header {
     }
     
 .main-nav {
+        grid-column: 1/-1;
         display: none
         }
     
@@ -231,9 +232,9 @@ fieldset {
 }
 
 .menu-icon {
+    grid-area: burger;
     aspect-ratio: 1;
     max-width: 33px;
-    /* background: black; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
