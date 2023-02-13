@@ -264,21 +264,6 @@ fieldset {
     width: 100%;
   }
 
-  .chevron-right {
-    aspect-ratio: 1;
-    max-width: 50px;
-    margin-top: 5rem;
-  }
-
-  .chevron-right>span {
-    display: block;
-    height: 50%;
-    width: 50%;
-    border-right: 10px solid;
-    border-bottom: 10px solid;
-    transform: rotate(-45deg);
-    margin: 0;
-  }
 
 .cta-white {
     background-color: white;
@@ -287,9 +272,9 @@ fieldset {
     text-decoration-line: none;
     color: #053541;
     text-transform: uppercase;
-    /* margin: 20px auto; */
     padding: 10px 40px;
     border-radius: 5px;
+    margin: 20px auto;
     grid-area: cta;
     max-width: max-content;
 }
@@ -299,11 +284,12 @@ fieldset {
     font-size: 1.5rem;
     font-weight: 600;
     text-decoration-line: none;
+    text-align: center;
     color: white;
     text-transform: uppercase;
-    /* margin: 20px auto; */
     padding: 10px 40px;
     border-radius: 5px;
+    margin: 20px auto;
     display: inline-block;
   }
 
@@ -314,8 +300,9 @@ fieldset {
     text-decoration-line: none;
     color: white; 
     text-transform: uppercase; 
-    margin: 20px auto; 
+    text-align: center;
     padding: 10px 40px;
+    margin: 20px auto;
     border-radius: 5px;
 }
 
@@ -326,7 +313,7 @@ fieldset {
     top: 200px;
     margin: auto;
 }
- .cta-centered {
+.cta-centered {
     text-align: center;
  }
 
@@ -366,11 +353,8 @@ input {
 }
 
 .selcted_image {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+    width: 700px;
     border: 7px solid #D2CDCA;
-    padding: 60px 0px;
 }
 
 .container {
@@ -393,8 +377,8 @@ input {
 
 .product_page {
     display: grid;
-    column-gap: 1em;
-    grid-template-columns: 1fr 2fr 1fr;  
+    gap: 1em;
+    grid-template-columns: 2fr 1fr 1fr;  
 }
 .container_products {
     display: grid;
@@ -405,11 +389,19 @@ input {
 }
 .cart_container {
     display: grid;
-    column-gap: 1em;
-    row-gap: 1em;
+    gap: 1em;
     grid-template-columns: 1fr 1fr;
 }
 
+.cart-total {
+    padding-top: 30px;
+    text-align: center;
+    gap: 30px;
+}
+.cta-cart {
+    display: block;
+    align-content: center;
+}
 .check-out_container {
     display: grid;
     column-gap: 1em;
@@ -425,8 +417,8 @@ input {
     justify-content: space-around;
 }
 .selcted_image_products {
+    display: flex;
     width: 100%;
-    height: 100%;
     margin: auto;
     box-sizing: border-box;
     border: 7px solid #D2CDCA;
@@ -676,7 +668,12 @@ header a {
         column-gap: 1em; 
         grid-template-columns: 1fr;
      }
-
+    
+     .product_page {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 1fr;  
+    }
 }
 
 @media (min-width: 757px) {
