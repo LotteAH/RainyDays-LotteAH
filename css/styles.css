@@ -267,11 +267,13 @@ fieldset {
     font-size: 1.5rem;
     font-weight: 600;
     text-decoration-line: none;
-    color: #053541; 
-    text-transform: uppercase; 
-    margin: 20px auto; 
+    color: #053541;
+    text-transform: uppercase;
+    /* margin: 20px auto; */
     padding: 10px 40px;
     border-radius: 5px;
+    grid-area: cta;
+    max-width: max-content;
 }
 
 .cta-blue {
@@ -457,6 +459,30 @@ input {
     position: relative;
 }
 
+.welcome_container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "logo" "title" "subtitle" "cta";
+}
+
+@media (min-width: 757px) {
+    .welcome_container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: ". logo" "title ." "subtitle ." "cta .";
+    }
+
+    .white_logo {
+        justify-self: center;
+    }
+
+    .white_logo {
+        grid-area: logo;
+        justify-self: end;
+    }
+}
+
 
 .welcome__content {
     color: #fff;
@@ -470,14 +496,16 @@ input {
     color: #fff;
     font-size: 4rem;
     text-transform: uppercase;
-    padding-top: 25%;
+    /* padding-top: 25%; */
     line-height: 4rem;
+    grid-area: title;
 }
 .white_text-small{
     color: #fff;
-    font-size: 2rem; 
+    font-size: 2rem;
     line-height: 2rem;
-    margin-bottom: 40px; 
+    grid-area: subtitle;
+    /* margin-bottom: 40px; */
 }
 
 .categories_womens {
@@ -493,9 +521,10 @@ input {
 
 
 .white_logo {
-    float:right;
-    padding: 60px;
-    margin-right: 20px;
+    /* padding: 60px; */
+    /* margin-right: 20px; */
+    grid-area: logo;
+    justify-self: center;
 }
 
 .categories_mens {
@@ -621,7 +650,7 @@ header a {
     }
     .white_logo {
         float: center;
-        padding: 60px;
+        /* padding: 60px; */
     }
     .container_footer {
         display: grid;
@@ -693,14 +722,14 @@ header a {
         color: #fff;
         font-size: 4rem;
         text-transform: uppercase;
-        padding-top: 25%;
+        /* padding-top: 25%; */
         line-height: 4rem;
     }
     .white_text-small{
         color: #fff;
-        font-size: 2rem; 
+        font-size: 2rem;
         line-height: 2rem;
-        margin-bottom: 40px; 
+        /* margin-bottom: 40px; */
     }
     
 }
