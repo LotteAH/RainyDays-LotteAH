@@ -66,11 +66,9 @@ header {
         }
     
 .cart-icon, .hamburger-icon {
-        width: 26px;
-        height: 26px;
-        margin-right: 20px;
         cursor: pointer;
-        background-color: pink;
+        /* background-color: pink; */
+        width: 100%;
     }
     
 
@@ -133,9 +131,9 @@ header a {
     
 header {
         display: grid;
-        grid-template-areas: 
-                        "logo box cart burger";
-        grid-template-columns: auto 1fr auto auto;
+        grid-template-areas:
+        "logo box cart burger";
+        grid-template-columns: auto 1fr 26px 26px 0px;
         grid-template-rows: auto;
         width: 100%;
         padding-top: 20px;
@@ -238,12 +236,14 @@ fieldset {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
   }
 
-  .hamburger-icon>span {
+  .menu-icon>span {
     flex: 0 0 6px;
     background: #053541;
     border-radius: 15px;
+    width: 100%;
   }
 
   .chevron-right {
@@ -635,10 +635,10 @@ header a {
     header {
         display: grid;
         grid-template-areas:
-            "logo box cart"
-            "nav nav nav";
-            grid-template-columns: auto 1fr auto;
-            grid-template-rows: auto auto;
+            "logo box cart burger"
+            "nav nav nav nav";
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto;
     }
 
     .hamburger-icon {
@@ -648,8 +648,7 @@ header a {
     .main-nav {
         display: flex;
         width: 100%;
-        grid-area: nav;
-       
+        grid-row: 2;
     }
 
     .close-btn-wrapper {
