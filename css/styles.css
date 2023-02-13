@@ -24,11 +24,22 @@ body {
   }
 
 .x-container {
-    max-width: 80ch;
+    width: 100%;
+    max-width: 115ch;
     margin: 0 auto;
     padding: 40px;
     flex: 1;
   }
+
+  .y-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
   
 header {
     display: grid;
@@ -313,7 +324,7 @@ fieldset {
     justify-content:center;
     position: relative;
     top: 200px;
-    margin: 20px
+    margin: auto;
 }
  .cta-centered {
     text-align: center;
