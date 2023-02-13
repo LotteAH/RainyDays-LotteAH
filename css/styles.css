@@ -553,6 +553,10 @@ input[type="text"] {
   min-height: 200px;  
 }
 
+.some_ikons {
+    align-items: center;
+    padding: 5px;
+}
 
 /**
 Media queries 
@@ -568,21 +572,21 @@ Media queries
         box-shadow: 1px 1px 1px 1px #ccc;
         font-family: "Source Sans Pro", Verdana, Geneva, Tahoma, sans-serif;
         font-weight: 700;
-        color:black;
+        color:#053541;
         z-index: 1000;
     }
 
     #menu-checkbox:checked ~ nav li:hover {
         text-decoration: underline;
         text-underline-offset: 5px;
-        color: black;
+        color: #053541;
     }
 
 
 
 nav a {
     background-color: #fff;
-    color: black;
+    color: #053541;
 } 
 
 .main-nav ul {
@@ -592,7 +596,7 @@ nav a {
 
 
 header a {
-        color: black;
+        color:#053541;
     }
     .welcome__content {
         color: #fff;
