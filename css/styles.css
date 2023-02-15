@@ -460,9 +460,8 @@ input {
 }
 
 .cart-total {
-    padding-top: 30px;
-    text-align: center;
-    gap: 30px;
+    display: inline-block;
+    gap: 2em;
 }
 .cta-cart {
     display: block;
@@ -667,6 +666,16 @@ Media queries
     .white-text {
         font-size: 3rem;
         line-height: 3rem;
+    }
+
+    .cart_container {
+        display: inline-block;
+        margin: 20px auto;
+    }
+
+    .cart-total {
+        display: inline-block;
+        text-align: center;
     }
 }
 
