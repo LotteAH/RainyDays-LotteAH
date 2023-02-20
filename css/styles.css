@@ -462,6 +462,7 @@ input {
 .cart-total {
     display: inline-block;
     gap: 2em;
+    padding-top: 20px;
 }
 .cta-cart {
     display: block;
@@ -676,6 +677,12 @@ Media queries
     .cart-total {
         display: inline-block;
         text-align: center;
+    }
+
+    .check-out_container {
+        display: inline-block;
+        margin: 20px auto;
+        padding-bottom: 20px;
     }
 }
 
