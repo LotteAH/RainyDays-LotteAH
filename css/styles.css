@@ -415,6 +415,7 @@ input {
     flex-direction: column;
     justify-content: space-between;
     border: 2px solid #D2CDCA;
+    margin-bottom: 2em;
   }
 
 .container_shop {
