@@ -30,7 +30,7 @@ async function getJackets() {
           <h3>${jackets[i].title}</h3>
           <h4>${jackets[i].baseColor}</h4>
           <h5>${jackets[i].description}</h5>
-          <p class="price">${jackets[i].price}</p>
+          <p class="price">$ ${jackets[i].price}</p>
           <a href="oslo_urban.html"> </a>
         </div>
       `;
