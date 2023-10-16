@@ -11,8 +11,10 @@ async function getJackets() {
 
   resultsContainer.innerHTML = "";
   
-  for(let i = 0; < facts.length; i++) {
+  for(let i = 0; < rainy-days.length; i++) {
+      console.log(id[i].text);
 
+      resultsContainer.innerHTML += `<div class"result">${rainy-days[i].text}</div>`;
   }
 }
 console.log(getJackets);
