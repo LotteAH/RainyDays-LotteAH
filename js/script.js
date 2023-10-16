@@ -8,10 +8,13 @@ async function getJackets() {
   const results = awaitresponse.json();
 
   const facts = results.all;
+
+  resultsContainer.innerHTML = "";
   
   for(let i = 0; < facts.length; i++) {
-    
+
   }
 }
+console.log(getJackets);
 
 getJackets();
