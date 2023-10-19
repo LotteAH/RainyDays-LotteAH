@@ -5,17 +5,19 @@
 
 
  function getSpecificJacketIdFromQuery() {
-    const urlParams = new URLSearchParams(window,loction, search);
+    const urlParams = new URLSearchParams(window,location, search);
     return urlParams.get("id");
+ }
 
     async function fetchSpecificJacket() {
         const itemId = getSpecificJacketIdFromQuery();
         if(!itemId) {
             return;
         }
+    
 
         const response = await fetch (`"https://api.noroff.dev/api/v1/rainy-days"${itemId}`);
-        
+    } 
     
     // const response = await fetch(url);
 
