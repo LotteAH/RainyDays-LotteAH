@@ -5,19 +5,17 @@
 
 
  function getSpecificJacketIdFromQuery() {
-    const urlParams = new URLSearchParams(window,location, search);
+    const urlParams = new URLSearchParams(window,location,search);
     return urlParams.get("id");
  }
 
-    async function fetchSpecificJacket() {
+    async function hSpecificJacket() {
         const itemId = getSpecificJacketIdFromQuery();
         if(!itemId) {
             return;
         }
-    
-
         const response = await fetch (`"https://api.noroff.dev/api/v1/rainy-days"${itemId}`);
-    } 
+      
     
     // const response = await fetch(url);
 
@@ -36,7 +34,7 @@
 //       if (!response.ok) {
 //         throw new Error("Failed to get jacket with that id");
 //       }
-      const specificJacket = await response.json();
+      const SpecificJacket = await response.json(); {
   
       const specificJacket = document.getElementById("item-details");
       resultsContainer.innerHTML += `<div class="container products ">
@@ -52,6 +50,6 @@
     //   showError(error.message);
     // }
   }
-  
-  fetchSpecificJacket();
+}
+  getSpecificJacket();
   
