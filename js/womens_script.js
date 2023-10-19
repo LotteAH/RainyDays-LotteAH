@@ -23,6 +23,16 @@ async function getWomensJackets() {
                                           `;
     }
   }
+  data.forEach((womensJakets) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = womensJackets.setup;
+    listItem.addEventListener("click", () => {
+      window.location.href = `womens_specific_jacket.html?id=${womensJackets.id}`;
+    });
+    specificJacketList.appendChild(listItem);
+  });
+} catch (error) {
+  showError(error.message);
 }
 
 getWomensJackets();
