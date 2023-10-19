@@ -3,8 +3,9 @@ const resultsContainer = document.getElementById("mens_results");
 const url = "https://api.noroff.dev/api/v1/rainy-days";
 
 async function getMensJackets() {
+    // showLoadingIndicator();
   const response = await fetch(url);
-
+//   clearLoadingIndicator();
   const jackets = await response.json();
 
   resultsContainer.innerHTML = "";
@@ -31,7 +32,7 @@ async function getMensJackets() {
 }
 
 function showLoadingIndicator() {
-    const itemList = document.getElementById("mensJackets");
+    const itemList = document.getElementByClass("loader");
     itemList.innerHTML = "<li>Loading...</li>";
   }
 
