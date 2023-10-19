@@ -23,17 +23,29 @@ async function getWomensJackets() {
                                           `;
     }
   }
-  data.forEach((womensJakets) => {
+}
+  async function getSpecificJacket() {
+    try {
+      const data = await getSpecificJacket();
+      const specificJacketList = document.getElementById("specificJacket-list");
+      specificJaketList.innerHTML = ""; // Clear loading indicatordata.forEach((womensJakets) => {
     const listItem = document.createElement("li");
     listItem.textContent = womensJackets.setup;
     listItem.addEventListener("click", () => {
-      window.location.href = `womens_specific_jacket.html?id=${womensJackets.id}`;
+      window.location.href = `womens_specific_jacket.html?id=${specificJacket.id}`;
     });
     specificJacketList.appendChild(listItem);
-  });
-} catch (error) {
+  ;
+catch (error) {
   showError(error.message);
 }
+}
+  }
+
+  function showLoadingIndicator() {
+    const itemList = document.getElementById("womensJackets");
+    itemList.innerHTML = "<li>Loading...</li>";
+  }
 
 getWomensJackets();
 

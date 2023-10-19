@@ -25,4 +25,9 @@ async function getMensJackets() {
   }
 }
 
+function showLoadingIndicator() {
+    const itemList = document.getElementById("mensJackets");
+    itemList.innerHTML = "<li>Loading...</li>";
+  }
+
 getMensJackets();
