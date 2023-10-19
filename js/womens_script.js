@@ -20,27 +20,32 @@ async function getWomensJackets() {
                                           <h4>${jackets[i].baseColor}</h4>
                                           <h5>${jackets[i].description}</h5>
                                           <p class="price">$ ${jackets[i].price}</p>
+                                          <a href="specific_jacket.html"> </a>
+                                          </div>
                                           `;
+      resultsContainer.addEventListener("click", () => {
+        window.location.href = `specific_jacket.html?id=${jackets[i].id}`;
+      })
     }
   }
 }
-  async function getSpecificJacket() {
-    try {
-      const data = await getSpecificJacket();
-      const specificJacketList = document.getElementById("specificJacket-list");
-      specificJaketList.innerHTML = ""; // Clear loading indicatordata.forEach((womensJakets) => {
-    const listItem = document.createElement("li");
-    listItem.textContent = womensJackets.setup;
-    listItem.addEventListener("click", () => {
-      window.location.href = `specific_jacket.html?id=${jackets[i].id}`;
-    });
-    specificJacketList.appendChild(listItem);
-  ;
-catch (error) {
-  showError(error.message);
-}
-}
-  }
+//   async function getSpecificJacket() {
+//     try {
+//       const data = await getSpecificJacket();
+//       const specificJacketList = document.getElementById("specificJacket-list");
+//       specificJaketList.innerHTML = ""; // Clear loading indicatordata.forEach((womensJakets) => {
+//     const listItem = document.createElement("li");
+//     listItem.textContent = womensJackets.setup;
+//     listItem.addEventListener("click", () => {
+//       window.location.href = `specific_jacket.html?id=${jackets[i].id}`;
+//     });
+//     specificJacketList.appendChild(listItem);
+//   ;
+// catch (error) {
+//   showError(error.message);
+// }
+// }
+//   }
 
   function showLoadingIndicator() {
     const itemList = document.getElementById("womensJackets");
