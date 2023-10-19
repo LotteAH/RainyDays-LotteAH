@@ -32,7 +32,7 @@ async function getWomensJackets() {
     const listItem = document.createElement("li");
     listItem.textContent = womensJackets.setup;
     listItem.addEventListener("click", () => {
-      window.location.href = `womens_specific_jacket.html?id=${specificJacket.id}`;
+      window.location.href = `womens_specific_jacket.html?id=${jackets[i].id}`;
     });
     specificJacketList.appendChild(listItem);
   ;
