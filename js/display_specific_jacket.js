@@ -1,7 +1,7 @@
 
-// const resultsContainer = document.getElementById("specificJacket");
+const resultsContainer = document.getElementById("jackets[i].id");
 
-// const url = "https://api.noroff.dev/api/v1/rainy-days";
+const url = "https://api.noroff.dev/api/v1/rainy-days";
 
 
  function getSpecificJacketIdFromQuery() {
@@ -9,7 +9,7 @@
     return urlParams.get("id");
  }
 
-    async function hSpecificJacket() {
+    async function fetchSpecificJacket() {
         const itemId = getSpecificJacketIdFromQuery();
         if(!itemId) {
             return;
@@ -51,5 +51,5 @@
     // }
   }
 }
-  getSpecificJacket();
+  fetchSpecificJacket();
   
