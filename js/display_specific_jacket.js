@@ -5,7 +5,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
 
 
  function getSpecificJacketIdFromQuery() {
-    const urlParams = new URLSearchParams(window,location);
+    const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get("id");
  }
 

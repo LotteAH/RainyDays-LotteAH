@@ -7,13 +7,18 @@ async function getWomensJackets() {
   const response = await fetch(url);
   // clearLoadingIndicator();
   const jackets = await response.json();
+  return jackets;
+}
 
+async function displayJackets() {
+  const jackets = await getWomensJackets();
+  const resultsContainer = document.getElementById("womens_results");
   resultsContainer.innerHTML = "";
 
   for (let i = 0; i < jackets.length; i++) {
     if (jackets[i].gender == "Female") {
       console.log(jackets[i]);
-
+    
       resultsContainer.innerHTML += `<div class="container products ">
                                           <div class"result"><img src="${jackets[i].image}" alt="${jackets[i].description} class="product_img_men"/></div>
                                           <div id="image-container"></div>
@@ -26,10 +31,14 @@ async function getWomensJackets() {
       resultsContainer.addEventListener("click", () => {
         window.location.href = `specific_jacket.html?id=${jackets[i].id}`;
       });
+      return jackets;
+
+    }
+  }
+}
   //     resultsContainer.appendChild(jackets[i]);
   //   }
   // }
-}
 //   async function getSpecificJacket() {
 //     try {
 //       const data = await getSpecificJacket();
@@ -51,8 +60,7 @@ async function getWomensJackets() {
   // function showLoadingIndicator() {
   //   const jackets = document.getElementByClass("loader");
   //   itemList.innerHTML = "class= loader";
-  }
-}
+
 
 getWomensJackets();
 
