@@ -3,9 +3,8 @@ const resultsContainer = document.getElementById("womens_results");
 const url = "https://api.noroff.dev/api/v1/rainy-days";
 
 async function getWomensJackets() {
-// showLoadingIndicator();
+showLoadingIndicator();
   const response = await fetch(url);
-  // clearLoadingIndicator();
   const jackets = await response.json();
   return jackets;
 }
@@ -31,8 +30,7 @@ async function displayJackets() {
       resultsContainer.addEventListener("click", () => {
         window.location.href = `specific_jacket.html?id=${jackets[i].id}`;
       });
-      return jackets;
-
+      resultsContainer.appendChild(resultsContainer);
     }
   }
 }
@@ -57,9 +55,9 @@ async function displayJackets() {
 // }
 //   }
 
-  // function showLoadingIndicator() {
-  //   const jackets = document.getElementByClass("loader");
-  //   itemList.innerHTML = "class= loader";
+  function showLoadingIndicator() {
+    const jackets = document.getElementByClass("loader");
+    itemList.innerHTML = "class= loader";
 
 
 getWomensJackets();
