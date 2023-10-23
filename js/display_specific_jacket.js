@@ -11,8 +11,8 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
  }
 
     // async function fetchSpecificJacket() {
-    //     const itemId = getSpecificJacketIdFromQuery();
-    //     if(!itemId) {
+    //     const specificJacket = getSpecificJacketIdFromQuery();
+    //     if(!specificJacket) {
     //         return;
     //     }
     //     const response = await fetch (`https://api.noroff.dev/api/v1/rainy-days${itemId}`);
@@ -42,7 +42,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
 //       }
       const specificJacketResult = await response.json(); {
   
-      const specificJacket = document.getElementById("item-details");
+      const specificJacket = document.getElementById("specific_jacket");
       resultsContainer.innerHTML += `<div class="container products ">
                                           <div class"result"><img src="${jackets[i].image}" alt="${jackets[i].description} class="product_img_men"/></div>
                                           <div id="image-container"></div>
@@ -57,5 +57,5 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
     // }
   }
 }
-  fetchSpecificJacket();
+  displaySpecificJacketSpecificJacket();
   
