@@ -11,7 +11,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
  }  
 
   async function displaySpecificJacket() {
-    const jacketId = getSpecificJacketIdFromQuery(); {
+    const jacketId = getSpecificJacketIdFromQuery();
       if (!jacketId) {
         return;
       }
@@ -30,7 +30,6 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
                                           <p class="price">$ ${jackets[i].price}</p>
                                           `; 
   }
-}
   displaySpecificJacket();
   
 
