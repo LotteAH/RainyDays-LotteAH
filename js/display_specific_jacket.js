@@ -10,8 +10,12 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
  }  
 
   async function displaySpecificJacket(){
-    const jackets = getSpecificJacketIdFromQuery; {
-    const specificJacketResult = await response.json(); {
+    const jackets = getSpecificJacketIdFromQuery;(); {
+      if (!specific_jacketId) {
+        return;
+      }
+    
+      const specificJacketResult = await response.json(); {
   
       const specificJacket = document.getElementById("specific_jacket");
       resultsContainer.innerHTML += `<div class="container products">
