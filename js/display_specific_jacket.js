@@ -5,7 +5,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
 
 
  function getSpecificJacketIdFromQuery() {
-    const urlParams = new URLSearchParams(window,location,search);
+    const urlParams = new URLSearchParams(window,location);
     return urlParams.get("id");
  }
 
@@ -15,7 +15,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
             return;
         }
         const response = await fetch (`https://api.noroff.dev/api/v1/rainy-days${itemId}`);
-      
+          return;
     
     // const response = await fetch(url);
 
@@ -34,7 +34,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
 //       if (!response.ok) {
 //         throw new Error("Failed to get jacket with that id");
 //       }
-      const SpecificJacketresult = await response.json(); {
+      const specificJacketResult = await response.json(); {
   
       const specificJacket = document.getElementById("item-details");
       resultsContainer.innerHTML += `<div class="container products ">
