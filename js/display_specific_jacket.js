@@ -19,7 +19,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
     //       return;
     //   }
 
-      async function displaySpecificJacket(){
+
         
      
     
@@ -40,7 +40,12 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
 //       if (!response.ok) {
 //         throw new Error("Failed to get jacket with that id");
 //       }
-      const specificJacketResult = await response.json(); {
+ // } catch (error) {
+    //   showError(error.message);
+    // }
+    
+  async function displaySpecificJacket(){
+  const specificJacketResult = await response.json(); {
   
       const specificJacket = document.getElementById("specific_jacket");
       resultsContainer.innerHTML += `<div class="container products ">
@@ -52,9 +57,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
                                           <h5>${jackets[i].description}</h5>
                                           <p class="price">$ ${jackets[i].price}</p>
                                           `;
-    // } catch (error) {
-    //   showError(error.message);
-    // }
+   
   }
 }
   displaySpecificJacket();
