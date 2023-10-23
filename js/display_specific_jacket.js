@@ -1,5 +1,5 @@
 
-const resultsContainer = document.getElementById("womens_results");
+const resultsContainer = document.getElementById("specific_jacket");
  
 const url = "https://api.noroff.dev/api/v1/rainy-days";
  
