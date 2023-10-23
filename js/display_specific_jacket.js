@@ -20,7 +20,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
 
       async function displaySpecificJacket(){
         
-      }
+     
     
     // const response = await fetch(url);
 
