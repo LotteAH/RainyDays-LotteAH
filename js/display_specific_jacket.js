@@ -6,17 +6,18 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
 
  function getSpecificJacketIdFromQuery() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get("id");
+    const id = urlParams.get("id");
+    return id;
  }
 
-    async function fetchSpecificJacket() {
-        const itemId = getSpecificJacketIdFromQuery();
-        if(!itemId) {
-            return;
-        }
-        const response = await fetch (`https://api.noroff.dev/api/v1/rainy-days${itemId}`);
-          return;
-      }
+    // async function fetchSpecificJacket() {
+    //     const itemId = getSpecificJacketIdFromQuery();
+    //     if(!itemId) {
+    //         return;
+    //     }
+    //     const response = await fetch (`https://api.noroff.dev/api/v1/rainy-days${itemId}`);
+    //       return;
+    //   }
 
       async function displaySpecificJacket(){
         
