@@ -16,6 +16,11 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
         }
         const response = await fetch (`https://api.noroff.dev/api/v1/rainy-days${itemId}`);
           return;
+      }
+
+      async function displaySpecificJacket(){
+        
+      }
     
     // const response = await fetch(url);
 

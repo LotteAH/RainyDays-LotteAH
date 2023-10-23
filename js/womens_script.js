@@ -58,7 +58,7 @@ async function displayJackets() {
   function showLoadingIndicator() {
     const jackets = document.getElementByClass("loader");
     itemList.innerHTML = "loader";
-
+  }
 
 getWomensJackets();
 
