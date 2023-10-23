@@ -5,7 +5,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
 
 
  function getSpecificJacketIdFromQuery() {
-    const urlParams = new URLSearchParams(window.location.search);
+    const urlParams = new URLSearchParams(window.location);
     const id = urlParams.get("id");
     return id;
  }
@@ -57,5 +57,5 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
     // }
   }
 }
-  displaySpecificJacketSpecificJacket();
+  displaySpecificJacket();
   
