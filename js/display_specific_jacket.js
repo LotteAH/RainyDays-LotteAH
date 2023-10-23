@@ -5,14 +5,14 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
  
 
 
- function getSpecificJacketIdFromQuery() {
-    const urlParams = new URLSearchParams(window.location);
+ async function getSpecificJacketsIdFromQuery() {
+    const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get("id");
  }  
 
   async function displaySpecificJacket() {
-    const jacketId = getSpecificJacketIdFromQuery();
-      if (!jacketId) {
+    const jacketsId = await getSpecificJacketIdFromQuery();
+      if (!jacketsId) {
         return;
       }
     
@@ -30,6 +30,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
                                           <p class="price">$ ${jackets[i].price}</p>
                                           `; 
   }
+  
   displaySpecificJacket();
   
 
