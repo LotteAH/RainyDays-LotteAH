@@ -26,9 +26,9 @@ async function getWomensJackets() {
       resultsContainer.addEventListener("click", () => {
         window.location.href = `specific_jacket.html?id=${jackets[i].id}`;
       });
-      resultsContainer.appendChild(jackets[i]);
-    }
-  }
+  //     resultsContainer.appendChild(jackets[i]);
+  //   }
+  // }
 }
 //   async function getSpecificJacket() {
 //     try {
@@ -48,21 +48,12 @@ async function getWomensJackets() {
 // }
 //   }
 
-  function showLoadingIndicator() {
-    const jackets = document.getElementByClass("loader");
-    itemList.innerHTML = "class= loader";
+  // function showLoadingIndicator() {
+  //   const jackets = document.getElementByClass("loader");
+  //   itemList.innerHTML = "class= loader";
   }
+}
 
 getWomensJackets();
 
 
-// hello, it's Talitha here 
-// Hi :)
-
-
-  //                             <a href="oslo_urban.html"
-          //                             ><img
-          //                             src="images/womens_1.jpg"
-          //     alt="Oslo Urban Anorak"
-          //     class="product_img_men"
-          // /></a>

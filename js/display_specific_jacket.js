@@ -1,5 +1,5 @@
 
-const resultsContainer = document.getElementById("jackets[i].id");
+const resultsContainer = document.getElementById("specific_jacket");
 
 const url = "https://api.noroff.dev/api/v1/rainy-days";
 
@@ -14,7 +14,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
         if(!itemId) {
             return;
         }
-        const response = await fetch (`"https://api.noroff.dev/api/v1/rainy-days"${itemId}`);
+        const response = await fetch (`https://api.noroff.dev/api/v1/rainy-days${itemId}`);
       
     
     // const response = await fetch(url);
