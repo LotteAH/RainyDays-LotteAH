@@ -34,7 +34,7 @@
 //       if (!response.ok) {
 //         throw new Error("Failed to get jacket with that id");
 //       }
-      const SpecificJacket = await response.json(); {
+      const SpecificJacketresult = await response.json(); {
   
       const specificJacket = document.getElementById("item-details");
       resultsContainer.innerHTML += `<div class="container products ">
