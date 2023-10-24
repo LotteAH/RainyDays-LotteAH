@@ -1,27 +1,32 @@
 
 const resultsContainer = document.getElementById("specific_jacket");
- 
+const loadingIndicator = document.getElementById("loading-indicator");
+
 const url = "https://api.noroff.dev/api/v1/rainy-days";
- 
 
+async function getSpecificJacketIdFromQuery() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get("id");
+}
 
- async function getSpecificJacketIdFromQuery() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get("id");
- }  
+async function displaySpecificJacket() {
+  // Show the loading indicator while fetching data
+  showLoadingIndicator();
 
-  async function displaySpecificJacket() {
-    const jacketsId = await getSpecificJacketIdFromQuery();
-      if (!jacketsId) {
-        return;
-      }
-    
-      const response = await fetch(`https://api.noroff.dev/api/v1/rainy-days/${jacketsId}`); 
-      const jackets = await response.json();
+  const jacketsId = await getSpecificJacketIdFromQuery();
+  if (!jacketsId) {
+    return;
+  }
 
-      const resultsContainer = document.getElementById("specific_jacket");
-      resultsContainer.innerHTML += `<div id="specific_jacket">
-                                      <div class="selcted_image_products selected_image_products">
+  const response = await fetch(`https://api.noroff.dev/api/v1/rainy-days/${jacketsId}`);
+  const jackets = await response.json();
+
+  // Hide the loading indicator after data is loaded
+  hideLoadingIndicator();
+
+  resultsContainer.innerHTML = `
+    <div id="specific_jacket">
+      <div class="selcted_image_products selected_image_products">
         <img src="${jackets.image}" alt="${jackets.description}" />
       </div>
       <div class="product_info">
@@ -32,10 +37,19 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
         <a href="cart.html" class="cta-blue_left">ADD TO CART</a>
       </div>
     </div>
-                                          `; 
-  }
-  
-  displaySpecificJacket();
+  `;
+}
+
+function showLoadingIndicator() {
+  loadingIndicator.style.display = "block";
+}
+
+function hideLoadingIndicator() {
+  loadingIndicator.style.display = "none";
+}
+
+displaySpecificJacket();
+
   
 
    // async function fetchSpecificJacket() {

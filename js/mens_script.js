@@ -1,22 +1,23 @@
 const resultsContainer = document.getElementById("mens_results");
+const loadingIndicator = document.querySelector(".loader");
 const url = "https://api.noroff.dev/api/v1/rainy-days";
 
 async function getMensJackets() {
-  // showLoadingIndicator(); // Show the loading indicator
+  showLoadingIndicator(); 
   const response = await fetch(url);
   const jackets = await response.json();
 
-  // Hide the loading indicator when the data is loaded
-  // hideLoadingIndicator();
+ 
+  hideLoadingIndicator();
 
   resultsContainer.innerHTML = "";
 
   for (let i = 0; i < jackets.length; i++) {
     if (jackets[i].gender == "Male") {
-      // Create a unique ID for each jacket element
+
       const jacketId = jackets[i].id;
 
-      // Create the HTML for each jacket with a dynamic link
+
       const jacketHTML = `
         <div class="container products">
           <a href="specific_jacket.html?id=${jacketId}">
@@ -30,25 +31,23 @@ async function getMensJackets() {
         </div>
       `;
 
-      // Create a temporary div element to hold the jacket HTML
       const jacketElement = document.createElement('div');
       jacketElement.innerHTML = jacketHTML;
 
-      // Append the jacket element to the results container
       resultsContainer.appendChild(jacketElement);
     }
   }
 }
 
-// function showLoadingIndicator() {
-//   const loadingIndicator = document.querySelector(".loader"); // Select the loading indicator by class
-//   loadingIndicator.style.display = "block"; // Show the loading indicator
-// }
+function showLoadingIndicator() {
+  const loadingIndicator = document.querySelector(".loader"); 
+  loadingIndicator.style.display = "block";
+}
 
-// function hideLoadingIndicator() {
-//   const loadingIndicator = document.querySelector(".loader"); // Select the loading indicator by class
-//   loadingIndicator.style.display = "none"; // Hide the loading indicator
-// }
+function hideLoadingIndicator() {
+  const loadingIndicator = document.querySelector(".loader"); 
+  loadingIndicator.style.display = "none";
+}
 
 getMensJackets();
 
