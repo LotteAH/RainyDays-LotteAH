@@ -24,6 +24,7 @@ async function displaySpecificJacket() {
 
   resultsContainer.innerHTML = `
     <div id="specific_jacket">
+    <div  class="container_specific_jacket">
       <div class="selected_image_products">
         <img src="${jackets.image}" alt="${jackets.description}" />
       </div>
@@ -34,6 +35,7 @@ async function displaySpecificJacket() {
         <p class="price">$ ${jackets.price}</p>
         <a href="cart.html" class="cta-blue_cart">ADD TO CART</a>
       </div>
+    </div>
     </div>
   `;
 }
@@ -47,3 +49,4 @@ function hideLoadingIndicator() {
 }
 
 displaySpecificJacket();
+
