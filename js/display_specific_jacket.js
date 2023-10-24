@@ -20,14 +20,18 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
       const jackets = await response.json();
 
       const resultsContainer = document.getElementById("specific_jacket");
-      resultsContainer.innerHTML += `<div class="container products">
-                                          <div class"result"><img src="${jackets[i].image}" alt="${jackets[i].description} class="product_img_men"/></div>
-                                          <div id="image-container"></div>
-                                          <h3>${jackets[i].title}</h3>
-                                          <h4>${jackets[i].baseColor}</h4>
-                                          <h4>${jackets[i].size}</h4>
-                                          <h5>${jackets[i].description}</h5>
-                                          <p class="price">$ ${jackets[i].price}</p>
+      resultsContainer.innerHTML += `<div id="specific_jacket">
+                                      <div class="selcted_image_products selected_image_products">
+        <img src="${jackets.image}" alt="${jackets.description}" />
+      </div>
+      <div class="product_info">
+        <h3>${jackets.title}</h3>
+        <h4>${jackets.baseColor}</h4>
+        <h5>${jackets.description}</h5>
+        <p class="price">$ ${jackets.price}</p>
+        <a href="cart.html" class="cta-blue_left">ADD TO CART</a>
+      </div>
+    </div>
                                           `; 
   }
   
