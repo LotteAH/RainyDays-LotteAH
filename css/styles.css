@@ -403,7 +403,6 @@ input {
         padding: 10px;
         background-color: #f2f2f2;
         border: 1px solid #e0e0e0;
-
 }
 
 /* Product Pagese*/
@@ -692,7 +691,7 @@ Media queries
     display: grid;
     gap: 2em; 
     grid-template-columns: 1fr;
- }
+    }
 }
 
 @media (max-width: 599px) {
@@ -810,7 +809,7 @@ Media queries
 
  }
 
- @media (min-width: 600px) {
+@media (min-width: 600px) {
    
     header {
         display: grid;

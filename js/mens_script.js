@@ -46,10 +46,11 @@ async function getMensJackets() {
 
   const errorMessage = document.createElement('div');
   errorMessage.textContent = "An error occurred. Please try again later.";
-  errorMessage.style.color = "red";
+  errorMessage.classList.add('error-message');
 
+  resultsContainer.innerHTML = "";
   resultsContainer.appendChild(errorMessage);
-  }
+}
 }
 
 function showLoadingIndicator() {
