@@ -78,37 +78,8 @@
       </nav>
     </header>
     <main class="x-container">
-      <section>
-        <h1>Cart</h1>
-        <h4>1 item</h4>
-      </section>
-      <section class="cart_container">
-        <div>
-          <img
-            src="images/cart_jacket.jpg"
-            class="cart_images"
-            alt="Oslo Urban Anorak"
-          />
-        </div>
-        <div>
-          <br />
-          <h3>OSLO URBAN ANORAK</h3>
-          <h4>Light Green Mud</h4>
-          <h5>
-            With protective properties from <br />
-            technical hiking clothing.
-          </h5>
-          <p class="price">$300</p>
-          <a href="oslo_urban.html"> </a>
-        </div>
-      </section>
-      <section class="cart-total">
-        <h3>SUBTOTAL........$300</h3>
-        <a href="checkout.html" class="cta-green cta-cart">CHECK OUT</a>
-        <a href="categories.html" class="cta-blue cta-cart"
-          >CONTINUE SHOPPING</a
-        >
-      </section>
+      <div class="loader" id="loading-indicator"></div>
+      <section id="cart_item"></section>
     </main>
     <footer class="container_footer">
       <div class="vertical_line">
@@ -142,5 +113,6 @@
         />
       </div>
     </footer>
+    <script src="js/cart_script.js"></script>
   </body>
 </html>

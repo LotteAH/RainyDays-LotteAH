@@ -37,11 +37,17 @@ async function displaySpecificJacket() {
             <h4>${jackets.baseColor}</h4>
             <h5>${jackets.description}</h5>
             <p class="price">$ ${jackets.price}</p>
-            <a href="cart.html" class="cta-blue_cart">ADD TO CART</a>
+            <button class="cta-blue_cart" id="addToCartBtn">ADD TO CART</button>
           </div>
         </div>
       </div>
     `;
+
+    // Add Event Listener for Add to Cart Button
+    const addToCartButton = document.getElementById("addToCartBtn");
+    addToCartButton.addEventListener("click", () => {
+      addToCart(jackets); // Call function to add item to cart
+    });
   } catch (error) {
     console.error("An error occurred:", error);
 
@@ -62,6 +68,18 @@ function hideLoadingIndicator() {
   loadingIndicator.style.display = "none";
 }
 
+function addToCart(item) {
+  // Here, you can write the logic to add the 'item' to the cart.
+  // For example, you can use localStorage to store the item details.
+  // This is a simple example, you might need to adjust it based on your cart implementation.
+
+  // Sample code to store item details in localStorage
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  cartItems.push(item);
+  localStorage.setItem("cart", JSON.stringify(cartItems));
+
+  // Optionally, redirect the user to the cart page after adding to the cart
+  window.location.href = "cart.html";
+}
+
 displaySpecificJacket();
-
-
