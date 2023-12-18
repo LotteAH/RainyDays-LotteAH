@@ -16,6 +16,7 @@ function showCartTotal() {
   const cartTotalContainer = document.querySelector(".cartnumbers");
   cartTotalContainer.innerText = getCartTotal(cart);
   console.log(getCartTotal(cart));
+  hideLoadingIndicator();
 }
 
 showCartTotal();

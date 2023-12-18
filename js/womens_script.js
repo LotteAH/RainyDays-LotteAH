@@ -1,9 +1,9 @@
+import { showLoadingIndicator, hideLoadingIndicator } from "./indicator.js";
 const resultsContainer = document.getElementById("womens_results");
 const loadingIndicator = document.querySelector(".loader");
 const url = "https://api.noroff.dev/api/v1/rainy-days";
 
 async function getWomensJackets() {
-  showLoadingIndicator();
 
   try {
     const response = await fetch(url);
@@ -13,7 +13,6 @@ async function getWomensJackets() {
     }
 
     const jackets = await response.json();
-    hideLoadingIndicator();
 
     resultsContainer.innerHTML = "";
 
@@ -50,16 +49,6 @@ async function getWomensJackets() {
     resultsContainer.innerHTML = "";
     resultsContainer.appendChild(errorMessage);
   }
-}
-
-function showLoadingIndicator() {
-  const loadingIndicator = document.querySelector(".loader");
-  loadingIndicator.style.display = "block";
-}
-
-function hideLoadingIndicator() {
-  const loadingIndicator = document.querySelector(".loader");
-  loadingIndicator.style.display = "none";
 }
 
 getWomensJackets();
