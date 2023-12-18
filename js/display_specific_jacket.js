@@ -1,5 +1,6 @@
+import { showLoadingIndicator, hideLoadingIndicator } from "./indicator.js";
+
 const resultsContainer = document.getElementById("specific_jacket");
-const loadingIndicator = document.getElementById("loading-indicator");
 
 const url = "https://api.noroff.dev/api/v1/rainy-days";
 
@@ -58,14 +59,6 @@ async function displaySpecificJacket() {
     resultsContainer.innerHTML = "";
     resultsContainer.appendChild(errorMessage);
   }
-}
-
-function showLoadingIndicator() {
-  loadingIndicator.style.display = "block";
-}
-
-function hideLoadingIndicator() {
-  loadingIndicator.style.display = "none";
 }
 
 function addToCart(item) {
