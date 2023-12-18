@@ -3,7 +3,7 @@ const loadingIndicator = document.getElementById("loading-indicator");
 const url = "https://api.noroff.dev/api/v1/rainy-days";
 
 function getCartItems() {
-  return JSON.parse(localStorage.getItem("cart_items")) || [];
+  return JSON.parse(localStorage.getItem("cart_item")) || [];
 }
   
   async function fetchCartDetails(productId) {
@@ -31,10 +31,8 @@ function getCartItems() {
             <h4>${jackets.baseColor}</h4>
             <h5>${jackets.description}</h5>
             <p class="price">$ ${jackets.price}</p>
-            <button class="cta-blue_cart" id="addToCartBtn">ADD TO CART</button>
-            <button class="cta-green cta-cart">CHECK OUT</a>
-        <a href="categories.html" class="cta-blue cta-cart"
-          >CONTINUE SHOPPING</a
+            <button class="cta-green cta-cart" id="addToCartBtn">CHECK OUT</button>
+            <button class="cta-blue cta-cart">CONTINUE SHOPPINGT</button>
           </div>
         </div>
       </div>
@@ -68,7 +66,8 @@ function displayCartItems() {
               <h4>${jackets.baseColor}</h4>
               <h5>${jackets.description}</h5>
               <p class="price">$ ${jackets.price}</p>
-              <button class="cta-blue_cart" id="addToCartBtn">ADD TO CART</button>
+              <button class="cta-green cta-cart" id="addToCartBtn">CHECK OUT</button>
+              <button class="cta-blue cta-cart">CONTINUE SHOPPINGT</button>
             </div>
           </div>
         `;
@@ -109,7 +108,8 @@ async function fetchCartDetails(productId) {
           <h4>${jackets.baseColor}</h4>
           <h5>${jackets.description}</h5>
           <p class="price">$ ${jackets.price}</p>
-          <button class="cta-blue_cart" id="addToCartBtn">ADD TO CART</button>
+          <button class="cta-green cta-cart" id="addToCartBtn">CHECK OUT</button>
+          <button class="cta-blue cta-cart">CONTINUE SHOPPINGT</button>
         </div>
       </div>
     `;

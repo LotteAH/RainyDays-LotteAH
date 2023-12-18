@@ -43,7 +43,7 @@ async function displaySpecificJacket() {
       </div>
     `;
 
-    // Add Event Listener for Add to Cart Button
+
     const addToCartButton = document.getElementById("addToCartBtn");
     addToCartButton.addEventListener("click", () => {
       addToCart(jackets); // Call function to add item to cart
