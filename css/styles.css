@@ -531,6 +531,25 @@ input {
     border: 2px solid #D2CDCA;
 }
 
+.cart_item {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;  
+}
+
+.remove-button {
+    background-color: #8e0f0f;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration-line: none;
+    color: white; 
+    text-transform: uppercase; 
+    text-align: center;
+    padding: 10px 40px;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
 .cart-numbers {
     text-align: right;
 }
