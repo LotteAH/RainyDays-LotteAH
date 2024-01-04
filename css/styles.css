@@ -537,6 +537,21 @@ input {
     grid-template-columns: 1fr 1fr;  
 }
 
+.cart-icon {
+    position: relative;
+  }
+  
+  .cart-item-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
 .remove-button {
     background-color: #8e0f0f;
     font-size: 1.5rem;

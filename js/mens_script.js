@@ -26,7 +26,6 @@ async function getMensJackets() {
             <div class="result">
               <img src="${jackets[i].image}" alt="${jackets[i].description}" class="product_img_men"/>
             </div>
-            <div>
             <h3>${jackets[i].title}</h3>
             <h4>${jackets[i].baseColor}</h4>
             <p class="price">$ ${jackets[i].price}</p>
@@ -49,7 +48,6 @@ async function getMensJackets() {
 
   resultsContainer.innerHTML = "";
   resultsContainer.appendChild(errorMessage);
-  hideLoadingIndicator();
 }
 }
 
