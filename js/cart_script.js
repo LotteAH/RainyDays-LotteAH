@@ -79,13 +79,8 @@ function renderUpdatedCart() {
   const subtotalElement = document.getElementById("subtotal");
   const subtotal = calculateSubtotal();
   subtotalElement.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
-
-  const cartItemCountElement = document.querySelector(".cart-item-count");
-  const cart = getCartItems();
-  const itemCount = cart.length; 
-
-  cartItemCountElement.textContent = itemCount;
 }
 
 
 renderUpdatedCart(); 
+
