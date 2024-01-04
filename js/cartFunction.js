@@ -13,6 +13,5 @@ function getCartItems() {
     }
   }
   
-  // Call updateCartItemsCount() when the page loads or cart items change
-  updateCartItemsCount(); // Make sure this function is called appropriately
+  updateCartItemsCount();
   
