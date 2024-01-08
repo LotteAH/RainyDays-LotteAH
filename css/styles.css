@@ -541,7 +541,7 @@ input {
     position: relative;
   }
   
-  .cart-items-count {
+  .cart-item-count {
     position: absolute;
     top: 0;
     right: 0;
