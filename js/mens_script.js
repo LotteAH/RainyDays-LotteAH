@@ -16,7 +16,7 @@ async function getMensJackets() {
   const jackets = await response.json();
 
   resultsContainer.innerHTML = "";
-  hideLoadingIndicator ()
+  hideLoadingIndicator()
   for (let i = 0; i < jackets.length; i++) {
     if (jackets[i].gender == "Male") {
       const jacketId = jackets[i].id;

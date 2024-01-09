@@ -563,7 +563,7 @@ input {
     padding: 5px 20px;
     margin: 20px auto;
     border-radius: 5px;
-
+    float:right
 }
 
 .cart-numbers {
@@ -732,24 +732,11 @@ input {
     border: 3px solid #D2CDCA;   
 }
 
-input[type="text-email"] {
-    background: #FFFFFF;
-    border: 3px solid #D2CDCA;
-    padding: 10px;
-    width: 50%;
-}
-
-input[type="text-card"] {
-    background: #FFFFFF;
-    border: 3px solid #D2CDCA;
-    padding: 10px;
-    width: 50%;
-}
 input[type="text"] {
     background: #FFFFFF;
     border: 3px solid #D2CDCA;
     padding: 10px;
-    width: 15%;
+    width: 100%;
 }
 
 .contact_info {
@@ -762,7 +749,6 @@ input[type="text"] {
 .form-wrapper {
     display: flex;
     flex-direction: column;
-    line-height: 2em;
 }
 
 .form-wrapper > * {
@@ -772,6 +758,13 @@ input[type="text"] {
     justify-content: space-between 20px;
 }
 
+.form__input {
+    display: block;
+    width: 100%; /* Adjust the width as needed */
+    margin-bottom: 10px; /* Add some space between inputs */
+  }
+
+  
 .message-box {
   min-height: 200px;  
 }
