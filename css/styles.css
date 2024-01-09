@@ -821,6 +821,13 @@ Media queries
 
 }
 
+.submit-wrapper {
+    text-align: center;
+    line-height: 2rem;
+    justify-content: space-around;
+    padding-top: 5em;
+}
+
 @media (min-width: 600px) and (max-width: 1000px) {
     
     .container {
