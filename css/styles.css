@@ -635,8 +635,17 @@ input {
   }
 
   #cart-items-count {
-    color: #053541;
-  }
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-flex; /* Display as inline-flex for a span element */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    }
+
 
 /* Check Out Page*/
 
@@ -764,7 +773,7 @@ input[type="text"] {
     margin-bottom: 10px; /* Add some space between inputs */
   }
 
-  
+
 .message-box {
   min-height: 200px;  
 }
