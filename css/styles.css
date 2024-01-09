@@ -732,11 +732,24 @@ input {
     border: 3px solid #D2CDCA;   
 }
 
+input[type="text-email"] {
+    background: #FFFFFF;
+    border: 3px solid #D2CDCA;
+    padding: 10px;
+    width: 50%;
+}
+
+input[type="text-card"] {
+    background: #FFFFFF;
+    border: 3px solid #D2CDCA;
+    padding: 10px;
+    width: 50%;
+}
 input[type="text"] {
     background: #FFFFFF;
     border: 3px solid #D2CDCA;
     padding: 10px;
-    width: 100%;
+    width: 15%;
 }
 
 .contact_info {
@@ -749,6 +762,7 @@ input[type="text"] {
 .form-wrapper {
     display: flex;
     flex-direction: column;
+    line-height: 2em;
 }
 
 .form-wrapper > * {
