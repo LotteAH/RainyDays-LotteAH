@@ -12,6 +12,7 @@ async function getSpecificJacketIdFromQuery() {
 async function displaySpecificJacket() {
 
   try {
+    showLoadingIndicator()
     const jacketsId = await getSpecificJacketIdFromQuery();
     if (!jacketsId) {
       throw new Error("Jacket ID not found in the query parameters.");
@@ -24,7 +25,7 @@ async function displaySpecificJacket() {
     }
 
     const jackets = await response.json();
-
+    hideLoadingIndicator()
     resultsContainer.innerHTML = `
       <div id="specific_jacket">
         <div class="container_specific_jacket">
@@ -56,6 +57,7 @@ async function displaySpecificJacket() {
   
     resultsContainer.innerHTML = "";
     resultsContainer.appendChild(errorMessage);
+    hideLoadingIndicator()
   }
 }
 

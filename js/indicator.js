@@ -1,4 +1,4 @@
-const loadingIndicator = document.getElementById("loading-indicator");
+const loadingIndicator = document.querySelector(".loader")
 
 export function showLoadingIndicator() {
   loadingIndicator.style.display = "block";

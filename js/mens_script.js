@@ -6,6 +6,7 @@ const url = "https://api.noroff.dev/api/v1/rainy-days";
 async function getMensJackets() {
 
   try {
+    showLoadingIndicator()
     const response = await fetch(url);
 
     if (!response.ok) {
@@ -15,7 +16,7 @@ async function getMensJackets() {
   const jackets = await response.json();
 
   resultsContainer.innerHTML = "";
-
+  hideLoadingIndicator ()
   for (let i = 0; i < jackets.length; i++) {
     if (jackets[i].gender == "Male") {
       const jacketId = jackets[i].id;
@@ -48,6 +49,7 @@ async function getMensJackets() {
 
   resultsContainer.innerHTML = "";
   resultsContainer.appendChild(errorMessage);
+  hideLoadingIndicator()
 }
 }
 

@@ -1,5 +1,3 @@
-import { showLoadingIndicator, hideLoadingIndicator } from "./indicator.js";
-
 const resultsContainer = document.getElementById("cart_item");
 
 const url = "https://api.noroff.dev/api/v1/rainy-days";

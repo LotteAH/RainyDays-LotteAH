@@ -1,4 +1,4 @@
-import { showLoadingIndicator, hideLoadingIndicator } from "./indicator.js";
+import { clearCart } from "./clear_cart.js";
 
 function getCartItems() {
   return JSON.parse(localStorage.getItem("cart")) || [];
@@ -16,7 +16,16 @@ function showCartTotal() {
   const cartTotalContainer = document.querySelector(".cartnumbers");
   cartTotalContainer.innerText = getCartTotal(cart);
   console.log(getCartTotal(cart));
-  hideLoadingIndicator();
 }
 
+function onSubmit(event) {
+  event.preventDefault()
+  clearCart()
+  window.location.href="sucess.html"
+}
+
+const form=document.forms.checkout
+form.addEventListener("submit",onSubmit)
+
 showCartTotal();
+console.log(form)
