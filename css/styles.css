@@ -542,7 +542,7 @@ input {
   }
   
   .cart-item-count {
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     background-color: red;
