@@ -648,8 +648,8 @@ input {
     color: white;
     font-weight: bold;
     font-size: 14px;
-    text-align: center; /* Center the text horizontally */
-    line-height: 24px; /* Center the text vertically */
+    text-align: center; 
+    line-height: 24px; 
   }
   
 
