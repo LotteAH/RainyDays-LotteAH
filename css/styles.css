@@ -635,16 +635,23 @@ input {
   }
 
   #cart-items-count {
+    position: absolute;
+    top: 60px;
+    right: 40px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
     background-color: red;
-    display: inline-flex; /* Display as inline-flex for a span element */
+    display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-weight: bold;
-    }
+    font-size: 14px;
+    text-align: center; /* Center the text horizontally */
+    line-height: 24px; /* Center the text vertically */
+  }
+  
 
 
 /* Check Out Page*/
