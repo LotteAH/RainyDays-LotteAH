@@ -27,7 +27,7 @@ async function getWomensJackets() {
                 <img src="${product.images[0].src}" alt="${product.name}" class="product_img_women"/>
               </div>
               <h3>${product.name}</h3>
-              <h4>${product.attributes[0].terms[0].name}</h4> <!-- Assuming baseColor is the first attribute -->
+              <h4>${product.attributes[0].terms[0].name}</h4>
               <p class="price">$ ${product.prices.price}</p>
             </a>
           </div>
