@@ -1,45 +1,44 @@
 import { showLoadingIndicator, hideLoadingIndicator } from "./indicator.js";
+
 const resultsContainer = document.getElementById("womens_results");
 const loadingIndicator = document.querySelector(".loader");
 const url = "http://flower-power.local/wp-json/wc/store/products";
 
 async function getWomensJackets() {
-
   try {
-    showLoadingIndicator ()
+    showLoadingIndicator();
     const response = await fetch(url);
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    const jackets = await response.json();
+    const products = await response.json();
 
     resultsContainer.innerHTML = "";
-    hideLoadingIndicator ()
-    for (let i = 0; i < jackets.length; i++) {
-      if (jackets[i].gender == "Female") {
-        const jacketId = jackets[i].id;
-
-        const jacketHTML = `
+    hideLoadingIndicator();
+    
+    products.forEach(product => {
+      if (product.categories.some(cat => cat.slug === "womens")) {
+        const productHTML = `
           <div class="container products">
-            <a href="specific_jacket.html?id=${jacketId}">
+            <a href="${product.permalink}">
               <div class="result">
-                <img src="${jackets[i].image}" alt="${jackets[i].description}" class="product_img_men"/>
+                <img src="${product.images[0].src}" alt="${product.name}" class="product_img_women"/>
               </div>
-              <h3>${jackets[i].title}</h3>
-              <h4>${jackets[i].baseColor}</h4>
-              <p class="price">$ ${jackets[i].price}</p>
+              <h3>${product.name}</h3>
+              <h4>${product.attributes[0].terms[0].name}</h4> <!-- Assuming baseColor is the first attribute -->
+              <p class="price">$ ${product.prices.price}</p>
             </a>
           </div>
         `;
-
-        const jacketElement = document.createElement('div');
-        jacketElement.innerHTML = jacketHTML;
-
-        resultsContainer.appendChild(jacketElement);
+        
+        const productElement = document.createElement('div');
+        productElement.innerHTML = productHTML;
+        
+        resultsContainer.appendChild(productElement);
       }
-    }
+    });
   } catch (error) {
     console.error("An error occurred:", error);
 
@@ -49,9 +48,8 @@ async function getWomensJackets() {
   
     resultsContainer.innerHTML = "";
     resultsContainer.appendChild(errorMessage);
-    hideLoadingIndicator ()
+    hideLoadingIndicator();
   }
 }
 
 getWomensJackets();
-
