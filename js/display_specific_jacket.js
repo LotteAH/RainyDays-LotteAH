@@ -2,7 +2,7 @@ import { showLoadingIndicator, hideLoadingIndicator } from "./indicator.js";
 
 const resultsContainer = document.getElementById("specific_jacket");
 
-const url = "http://flower-power.local/wp-admin/edit.php?post_type=product";
+const url = "http://flower-power.local/wp-json/wc/store/products";
 
 async function getSpecificJacketIdFromQuery() {
   const urlParams = new URLSearchParams(window.location.search);

@@ -1,6 +1,6 @@
 const resultsContainer = document.getElementById("cart_item");
 
-const url = "http://flower-power.local/wp-admin/edit.php?post_type=product";
+const url = "http://flower-power.local/wp-json/wc/store/products";
 
 function getCartItems() {
   return JSON.parse(localStorage.getItem("cart")) || [];

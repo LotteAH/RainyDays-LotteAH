@@ -1,7 +1,7 @@
 import { showLoadingIndicator, hideLoadingIndicator } from "./indicator.js";
 const resultsContainer = document.getElementById("womens_results");
 const loadingIndicator = document.querySelector(".loader");
-const url = "http://flower-power.local/wp-admin/edit.php?post_type=products";
+const url = "http://flower-power.local/wp-json/wc/store/products";
 
 async function getWomensJackets() {
 
