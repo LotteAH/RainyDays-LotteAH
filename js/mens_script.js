@@ -1,56 +1,55 @@
 import { showLoadingIndicator, hideLoadingIndicator } from "./indicator.js";
+
 const resultsContainer = document.getElementById("mens_results");
 const loadingIndicator = document.querySelector(".loader");
 const url = "http://flower-power.local/wp-json/wc/store/products";
 
 async function getMensJackets() {
-
   try {
-    showLoadingIndicator()
+    showLoadingIndicator();
     const response = await fetch(url);
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-  const jackets = await response.json();
+    const products = await response.json();
 
-  resultsContainer.innerHTML = "";
-  hideLoadingIndicator()
-  for (let i = 0; i < jackets.length; i++) {
-    if (jackets[i].gender == "Male") {
-      const jacketId = jackets[i].id;
+    resultsContainer.innerHTML = "";
+    hideLoadingIndicator();
+    
+    products.forEach(product => {
+      if (product.categories.some(cat => cat.slug === "mens")) {
+        const productHTML = `
+          <div class="container products">
+            <a href="${product.permalink}">
+              <div class="results">
+                <img src="${product.images[0].src}" alt="${product.name}" class="product_img_men"/>
+              </div>
+              <h3>${product.name}</h3>
+              <h4>${product.attributes[0].terms[0].name}</h4>
+              <p class="price">$ ${product.prices.price}</p>
+            </a>
+          </div>
+        `;
+        
+        const productElement = document.createElement('div');
+        productElement.innerHTML = productHTML;
+        
+        resultsContainer.appendChild(productElement);
+      }
+    });
+  } catch (error) {
+    console.error("An error occurred:", error);
 
-      const jacketHTML = `
-        <div class="container products">
-          <a href="specific_jacket.html?id=${jacketId}">
-            <div class="result">
-              <img src="${jackets[i].image}" alt="${jackets[i].description}" class="product_img_men"/>
-            </div>
-            <h3>${jackets[i].title}</h3>
-            <h4>${jackets[i].baseColor}</h4>
-            <p class="price">$ ${jackets[i].price}</p>
-          </a>
-        </div>
-      `;
-
-      const jacketElement = document.createElement('div');
-      jacketElement.innerHTML = jacketHTML;
-
-      resultsContainer.appendChild(jacketElement);
-    }
+    const errorMessage = document.createElement('div');
+    errorMessage.textContent = "An error occurred. Please try again later.";
+    errorMessage.classList.add('error-message');
+  
+    resultsContainer.innerHTML = "";
+    resultsContainer.appendChild(errorMessage);
+    hideLoadingIndicator();
   }
-} catch (error) {
-  console.error("An error occurred:", error);
-
-  const errorMessage = document.createElement('div');
-  errorMessage.textContent = "An error occurred. Please try again later.";
-  errorMessage.classList.add('error-message');
-
-  resultsContainer.innerHTML = "";
-  resultsContainer.appendChild(errorMessage);
-  hideLoadingIndicator()
-}
 }
 
 getMensJackets();

@@ -23,7 +23,7 @@ async function getWomensJackets() {
         const productHTML = `
           <div class="container products">
             <a href="${product.permalink}">
-              <div class="result">
+              <div class="results">
                 <img src="${product.images[0].src}" alt="${product.name}" class="product_img_women"/>
               </div>
               <h3>${product.name}</h3>
