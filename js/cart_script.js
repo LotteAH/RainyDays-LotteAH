@@ -40,7 +40,7 @@ async function createCartItemElement(itemId) {
 
   const priceParagraph = document.createElement("p");
   priceParagraph.classList.add("price");
-  priceParagraph.textContent = `$ ${item.prices.price}`;
+  priceParagraph.textContent = `Kr ${item.prices.price}`;
 
   const removeButton = document.createElement("button");
   removeButton.classList.add("remove-button");
@@ -86,7 +86,7 @@ async function renderUpdatedCart() {
 
   const subtotalElement = document.getElementById("subtotal");
   const subtotal = await calculateSubtotal();
-  subtotalElement.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+  subtotalElement.textContent = `Subtotal: Kr ${subtotal.toFixed(2)}`;
 }
 
 renderUpdatedCart();

@@ -28,7 +28,7 @@ async function getMensJackets() {
               </div>
               <h3>${product.name}</h3>
               <h4>${product.attributes[0].terms[0].name}</h4>
-              <p class="price">$ ${product.prices.price}</p>
+              <p class="price">Kr ${product.prices.price}</p>
             </a>
           </div>
         `;
