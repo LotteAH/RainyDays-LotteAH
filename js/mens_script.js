@@ -22,7 +22,7 @@ async function getMensJackets() {
       if (product.categories.some(cat => cat.slug === "mens")) {
         const productHTML = `
           <div class="container products">
-            <a href="${product.permalink}">
+            <a href="specific_jacket.html?id=${product.id}">
               <div class="results">
                 <img src="${product.images[0].src}" alt="${product.name}" class="product_img_men"/>
               </div>
