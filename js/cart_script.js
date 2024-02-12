@@ -1,13 +1,21 @@
 const resultsContainer = document.getElementById("cart_item");
-
 const url = "http://flower-power.local/wp-json/wc/store/products";
+
+async function getCartItemById(itemId) {
+  const response = await fetch(`${url}/${itemId}`);
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+  const item = await response.json();
+  return item;
+}
 
 function getCartItems() {
   return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
-function createCartItem(item) {
-  const cartContainer = document.getElementById("cart_item");
+async function createCartItemElement(itemId) {
+  const item = await getCartItemById(itemId);
 
   const cartItem = document.createElement("div");
   cartItem.classList.add("cart_item");
@@ -19,8 +27,8 @@ function createCartItem(item) {
   resultDiv.classList.add("result");
 
   const img = document.createElement("img");
-  img.src = item.image;
-  img.alt = item.description;
+  img.src = item.images[0].src;
+  img.alt = item.name;
 
   resultDiv.appendChild(img);
 
@@ -28,11 +36,11 @@ function createCartItem(item) {
   productInfoDiv.classList.add("product_info");
 
   const titleHeading = document.createElement("h3");
-  titleHeading.textContent = item.title;
+  titleHeading.textContent = item.name;
 
   const priceParagraph = document.createElement("p");
   priceParagraph.classList.add("price");
-  priceParagraph.textContent = `$ ${item.price}`;
+  priceParagraph.textContent = `$ ${item.prices.price}`;
 
   const removeButton = document.createElement("button");
   removeButton.classList.add("remove-button");
@@ -47,38 +55,38 @@ function createCartItem(item) {
   anchor.appendChild(productInfoDiv);
 
   cartItem.appendChild(anchor);
-  cartContainer.appendChild(cartItem);
+  resultsContainer.appendChild(cartItem);
 }
 
-function removeFromCart(itemId) {
+async function removeFromCart(itemId) {
   let cartItems = getCartItems();
-  const updatedCart = cartItems.filter(item => item.id !== itemId);
+  const updatedCart = cartItems.filter((item) => item.id !== itemId);
   localStorage.setItem("cart", JSON.stringify(updatedCart));
   renderUpdatedCart();
 }
 
-function calculateSubtotal() {
+async function calculateSubtotal() {
   const cart = getCartItems();
   let subtotal = 0;
 
-  cart.forEach(item => {
-    subtotal += parseFloat(item.price); 
-  });
+  for (const item of cart) {
+    const itemDetails = await getCartItemById(item.id);
+    subtotal += parseFloat(itemDetails.prices.price);
+  }
 
   return subtotal;
 }
 
-function renderUpdatedCart() {
-  const cartContainer = document.getElementById("cart_item");
-  cartContainer.innerHTML = "";
+async function renderUpdatedCart() {
+  resultsContainer.innerHTML = "";
   const cart = getCartItems();
-  cart.forEach(createCartItem);
+  for (const item of cart) {
+    await createCartItemElement(item.id);
+  }
 
   const subtotalElement = document.getElementById("subtotal");
-  const subtotal = calculateSubtotal();
+  const subtotal = await calculateSubtotal();
   subtotalElement.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
 }
 
-
-renderUpdatedCart(); 
-
+renderUpdatedCart();
