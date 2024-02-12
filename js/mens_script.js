@@ -1,7 +1,7 @@
 import { showLoadingIndicator, hideLoadingIndicator } from "./indicator.js";
 const resultsContainer = document.getElementById("mens_results");
 const loadingIndicator = document.querySelector(".loader");
-const url = "https://api.noroff.dev/api/v1/rainy-days";
+const url = "http://flower-power.local/wp-admin/edit.php?post_type=product";
 
 async function getMensJackets() {
 

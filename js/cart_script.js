@@ -1,6 +1,6 @@
 const resultsContainer = document.getElementById("cart_item");
 
-const url = "https://api.noroff.dev/api/v1/rainy-days";
+const url = "http://flower-power.local/wp-admin/edit.php?post_type=product";
 
 function getCartItems() {
   return JSON.parse(localStorage.getItem("cart")) || [];
